@@ -24,7 +24,6 @@ export class UsersController {
     private authService: AuthService,
   ) {}
 
-  @UsePipes(ValidationPipe)
   @Post('auth/register')
   async register(@Body() createUserDto: CreateUserDto): Promise<User> {
     return await this.userServices.register(createUserDto);
