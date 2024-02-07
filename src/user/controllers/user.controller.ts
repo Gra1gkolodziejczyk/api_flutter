@@ -2,8 +2,6 @@ import {
   Controller,
   Post,
   UseGuards,
-  UsePipes,
-  ValidationPipe,
   Request,
   Body,
   Get,

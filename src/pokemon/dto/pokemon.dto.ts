@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty } from '@nestjs/class-validator';
 
-class PokemonDto {
+export class PokemonDto {
   @ApiProperty()
   @IsNotEmpty()
   name: string;
@@ -10,5 +10,3 @@ class PokemonDto {
   @IsNotEmpty()
   url: string;
 }
-
-export default PokemonDto;
