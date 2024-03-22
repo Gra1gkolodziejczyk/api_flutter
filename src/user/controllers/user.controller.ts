@@ -22,6 +22,7 @@ export class UsersController {
     private authService: AuthService,
   ) {}
 
+  @UseGuards(LocalAuthGuards)
   @Post('auth/register')
   async register(@Body() createUserDto: CreateUserDto): Promise<User> {
     return await this.userServices.register(createUserDto);
